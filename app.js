@@ -24,6 +24,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get("/jsexam",function (req,res) {
     res.download(__dirname+"/data/exam01.docx","新华社JS初试考题.docx");
 })
+app.get("/jshomework",function (req,res) {
+    res.download(__dirname+"/data/exam02.docx","新华社JS综合大作业.docx");
+})
 
 app.get('/albums',function (req,res) {
     res.json(albums)
